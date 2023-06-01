@@ -39,9 +39,9 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "restaurant",
 #    "django_filters",
-#    "rest_framework.authtoken",
+    "rest_framework.authtoken",
     "rest_framework",
-#    "djoser",
+    "djoser",
 ]
 
 MIDDLEWARE = [
@@ -145,39 +145,39 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 INTERNAL_IPS = [
     '127.0.0.1'
 ]
-'''
+
 REST_FRAMEWORK = {
-    'DEFAULT_RENDERER_CLASSES': [
-        'rest_framework.renderers.JSONRenderer',
-        'rest_framework.renderers.BrowsableAPIRenderer',
+#    'DEFAULT_RENDERER_CLASSES': [
+#        'rest_framework.renderers.JSONRenderer',
+#        'rest_framework.renderers.BrowsableAPIRenderer',
 #        'rest_framework_xml.renderers.XMLRenderer',
-    ],
+#    ],
 
-    'DEFAULT_FILTER_CLASSES': [
-        'rest_framework.filters.OrderingFilter',
-        'rest_framework.filters.SearchFilter',
-        'django_filters.rest_framework.DjangoFilterBackend',
-    ],
+#    'DEFAULT_FILTER_CLASSES': [
+#        'rest_framework.filters.OrderingFilter',
+#        'rest_framework.filters.SearchFilter',
+#        'django_filters.rest_framework.DjangoFilterBackend',
+#    ],
 
-    'DEFAULT_PAGINATION_CLASS':'rest_framework.pagination.PageNumberPagination',
+#    'DEFAULT_PAGINATION_CLASS':'rest_framework.pagination.PageNumberPagination',
 
-    'PAGE_SIZE':5,
+#    'PAGE_SIZE':5,
 
 
     'DEFAULT_AUTHENTICATION_CLASSES' : [
         'rest_framework.authentication.TokenAuthentication',
-#        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
     ],
 
-    'DEFAULT_THROTTLE_CLASSES': [
-        'rest_framework.throttling.UserRateThrottle',
-        'rest_framework.throttling.AnonRateThrottle',
-        ],
+#    'DEFAULT_THROTTLE_CLASSES': [
+#        'rest_framework.throttling.UserRateThrottle',
+#        'rest_framework.throttling.AnonRateThrottle',
+#        ],
 
-    'DEFAULT_THROTTLE_RATES':{
-        'user':'500/minute',
-        'anon':'100/minute',
-    },
+#    'DEFAULT_THROTTLE_RATES':{
+#        'user':'500/minute',
+#        'anon':'100/minute',
+#    },
     
 }
 
@@ -189,5 +189,3 @@ DJOSER = {
         'user_list': ['rest_framework.permissions.IsAuthenticated',],
         },
 }
-
-'''
